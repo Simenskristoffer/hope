@@ -1,0 +1,70 @@
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
+
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import BlogRoll from "../components/BlogRoll";
+import Navbar from "../components/Navbar";
+
+export const LiftutleiePageTemplate = ({
+  title,
+  heading,
+  technicalInfo,
+  images
+}) => (
+  <div>
+    <h1>{title}</h1>
+    <h1>{heading}</h1>
+    <h1>{technicalInfo}</h1>
+    <h1>{heading}</h1>
+  </div>
+);
+
+LiftutleiePageTemplate.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  technicalInfo: PropTypes.object,
+  images: PropTypes.string
+};
+
+const LiftutleiePage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark;
+
+  return (
+    <Layout>
+      <LiftutleiePageTemplate
+        image={frontmatter.image}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
+        technicalInfo={frontmatter.technicalInfo}
+      />
+    </Layout>
+  );
+};
+
+LiftutleiePage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object
+    })
+  })
+};
+
+export default LiftutleiePage;
+
+export const pageQuery = graphql`
+  query LiftutleiePageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "liftutleie-page" } }) {
+      frontmatter {
+        title
+        heading
+        subheading
+        technicalInfo
+      }
+    }
+  }
+`;
