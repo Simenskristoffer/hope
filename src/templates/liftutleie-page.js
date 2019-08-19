@@ -7,12 +7,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import Navbar from "../components/Navbar";
 
-export const LiftutleiePageTemplate = ({
-  title,
-  heading,
-  technicalInfo,
-  images
-}) => (
+export const LiftutleiePageTemplate = ({ title, heading, technicalInfo }) => (
   <div>
     <h1>{title}</h1>
     <h1>{heading}</h1>
@@ -22,12 +17,10 @@ export const LiftutleiePageTemplate = ({
 );
 
 LiftutleiePageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  technicalInfo: PropTypes.object,
-  images: PropTypes.string
+  technicalInfo: PropTypes.object
 };
 
 const LiftutleiePage = ({ data }) => {
@@ -36,7 +29,6 @@ const LiftutleiePage = ({ data }) => {
   return (
     <Layout>
       <LiftutleiePageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
