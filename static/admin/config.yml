@@ -129,9 +129,9 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
-       - file: "src/pages/rustfrittRekkverk/index.md"
-        label: "Rustfritt Rekkverk"
-        name: "rustfrittRekkverk"
+       - file: "src/pages/automatisk-industrimaskin/index.md"
+        label: "Automatisk Industrimaskin"
+        name: "automatisk-industrimaskin"
         fields:
           - {
               label: "Template Key",
@@ -144,9 +144,24 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
-       - file: "src/pages/omOss/index.md"
+       - file: "src/pages/rustfritt-rekkverk/index.md"
+        label: "Rustfritt Rekkverk"
+        name: "rustfritt-rekkverk"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "liftutleie-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: Image, name: image, widget: image }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subheading", name: "subheading", widget: "string" }
+          - { label: "Technical Info", name: "technicalInfo", widget: "string" }
+       - file: "src/pages/om-oss/index.md"
         label: "Om Oss"
-        name: "omOss"
+        name: "om-oss"
         fields:
           - {
               label: "Template Key",

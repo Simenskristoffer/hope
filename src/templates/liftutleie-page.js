@@ -19,10 +19,10 @@ export const LiftutleiePageTemplate = ({
     <div
       className='full-width-image-container margin-top-0'
       style={{
-        backgroundImage: `url(${
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        height: "60vh"
+        height: "650px"
       }}
     >
       <h2
