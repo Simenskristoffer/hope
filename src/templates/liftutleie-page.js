@@ -3,37 +3,30 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
 import Navbar from "../components/Navbar";
 import Tjenester from "../components/Tjenester";
 
 export const LiftutleiePageTemplate = ({
   title,
   heading,
+  forsidebilde,
   technicalInfo,
   subheading,
   image
 }) => (
   <div className='content'>
     <div
-      className='full-width-image-container margin-top-0'
+      className='full-width-image-container margin-top-0 site-hero'
       style={{
         backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        height: "650px"
+          !!forsidebilde.childImageSharp
+            ? forsidebilde.childImageSharp.fluid.src
+            : forsidebilde
+        })`
       }}
     >
-      <h2
-        className='has-text-weight-bold is-size-1'
-        style={{
-          color: "white",
-          padding: "1rem"
-        }}
-      >
-        {title}
-      </h2>
+      <Navbar />
+      <h2 className='has-text-weight-bold is-size-2'>{title}</h2>
     </div>
     <section className='section is-large'>
       <div className='container has-text-centered'>
@@ -52,7 +45,7 @@ export const LiftutleiePageTemplate = ({
 
 LiftutleiePageTemplate.propTypes = {
   title: PropTypes.string,
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  forsidebilde: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
   subheading: PropTypes.string,
   technicalInfo: PropTypes.object
@@ -64,7 +57,7 @@ const LiftutleiePage = ({ data }) => {
   return (
     <Layout>
       <LiftutleiePageTemplate
-        image={frontmatter.image}
+        forsidebilde={frontmatter.forsidebilde}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -89,7 +82,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "liftutleie-page" } }) {
       frontmatter {
         title
-        image {
+        forsidebilde {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid

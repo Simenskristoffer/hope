@@ -41,7 +41,7 @@ collections:
             }
           - { label: "Tittel", name: "title", widget: "string" }
           - { label: "Undertittel", name: "subtitle", widget: "string" }
-          - { label: "Forsidebilde", name: "heroimage", widget: image }
+          - { label: "Forsidebilde", name: "forsidebilde", widget: image }
           - { label: "Firmanavn", name: "heading", widget: "string" }
           - { label: "Firmainfo", name: "subheading", widget: "string" }
           - { label: "Mer info", name: "info", widget: "string" }
@@ -57,7 +57,7 @@ collections:
               default: "liftutleie-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: forsidebilde, widget: image }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
@@ -72,7 +72,7 @@ collections:
               default: "automatisk-industrimaskin-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: forsidebilde, widget: image }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
@@ -87,7 +87,7 @@ collections:
               default: "rustfritt-rekkverk-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: forsidebilde, widget: image }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
@@ -102,7 +102,7 @@ collections:
               default: "liftutleie-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: forsidebilde, widget: image }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
@@ -117,7 +117,7 @@ collections:
               default: "liftutleie-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: forsidebilde, widget: image }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
@@ -132,7 +132,7 @@ collections:
               default: "aluminiumsrenner-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: image, widget: image }
+          - { label: Forsidebilde, name: forsidebilde, widget: image }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }

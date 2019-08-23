@@ -1,7 +1,7 @@
 ---
 templateKey: liftutleie-page
 title: Liftutleie
-image: /img/forsidebilde.jpg
+forsidebilde: /img/forsidebilde.jpg
 heading: Liftutleie
 subheading: Grei manøvrering og veldig praktisk i høge høgder!
 technicalInfo: >-

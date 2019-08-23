@@ -64,31 +64,34 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className='navbar-end has-text-centered'>
-              <Link className='navbar-item' to='/'>
+              <Link className='navbar-item nav-links' to='/'>
                 Heim
               </Link>
-              <Link className='navbar-item' to='/automatisk-industrimaskin'>
+              <Link
+                className='navbar-item nav-links'
+                to='/automatisk-industrimaskin'
+              >
                 Automatisk industrimaskin
               </Link>
-              <Link className='navbar-item' to='/liftutleie'>
+              <Link className='navbar-item nav-links' to='/liftutleie'>
                 Liftutleie
               </Link>
-              <Link className='navbar-item' to='/rustfritt-rekkverk'>
+              <Link className='navbar-item nav-links' to='/rustfritt-rekkverk'>
                 Rustfritt rekkverk
               </Link>
-              <Link className='navbar-item' to='/aluminiumsrenner'>
+              <Link className='navbar-item nav-links' to='/aluminiumsrenner'>
                 Aluminiumsrenner
               </Link>
-              <Link className='navbar-item' to='/om-oss'>
+              <Link className='navbar-item nav-links' to='/om-oss'>
                 Om oss
               </Link>
-              <Link className='navbar-item' to='/kontakt'>
+              <Link className='navbar-item nav-links' to='/kontakt'>
                 Kontakt
               </Link>
-              <Link className='navbar-item' to='/contact'>
+              <Link className='navbar-item nav-links' to='/contact'>
                 Contact
               </Link>
-              <Link className='navbar-item' to='/contact/examples'>
+              <Link className='navbar-item nav-links' to='/contact/examples'>
                 Form Examples
               </Link>
             </div>

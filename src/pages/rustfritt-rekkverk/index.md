@@ -1,7 +1,7 @@
 ---
 templateKey: rustfritt-rekkverk-page
 title: Rustfritt rekkverk
-image: /img/forsidebilde.jpg
+forsidebilde: /img/forsidebilde.jpg
 heading: Rustfritt rekkverk
 subheading: Kun fantasien setter stopper!
 technicalInfo: >-

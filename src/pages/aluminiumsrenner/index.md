@@ -1,7 +1,7 @@
 ---
 templateKey: aluminiumsrenner-page
 title: Aluminiumsrenner, pipehatter og beslag
-image: /img/forsidebilde.jpg
+forsidebilde: /img/forsidebilde.jpg
 heading: Aluminiumsrenner, pipehatter og beslag
 subheading:
 technicalInfo: >-

@@ -2,6 +2,8 @@
 
 //Color variabels
 $white: #ffffff;
+$footer-background: #222222;
+$footer-content: #aaaaaa;
 
 .navbar {
   position: absolute !important;
@@ -85,7 +87,7 @@ $white: #ffffff;
     height: 20rem;
   }
   #column1 {
-    background-color: #064589;
+    color: #515b69;
   }
   #column2 {
     background-color: #1a5b9b;
@@ -98,13 +100,49 @@ $white: #ffffff;
   }
 }
 
+// ---------- FOOTER COMPONENT ---------//
+
+footer {
+  background-color: $footer-background !important;
+
+  .footer-title {
+    color: $white !important;
+  }
+  .content {
+    color: $footer-content;
+  }
+  p a {
+    color: $footer-content;
+  }
+  p a:hover {
+    color: $white;
+  }
+  .navbar-item {
+    color: $footer-content !important;
+  }
+  .navbar-item:hover {
+    background-color: $footer-background !important;
+    color: $white !important;
+  }
+  @media only screen and (max-width: 1020px) {
+    .content ul {
+      list-style: none !important;
+    }
+    .has-text-left {
+      text-align: center !important;
+    }
+  }
+}
+
 //Mobile
 @media only screen and (max-width: 1020px) {
-  .navbar-item {
-    border-bottom: 1px solid;
-  }
-  #navMenu {
-    background-color: #262626 !important;
+  .navbar {
+    .nav-links {
+      border-bottom: 1px solid;
+    }
+    #navMenu {
+      background-color: #262626 !important;
+    }
   }
 }
 

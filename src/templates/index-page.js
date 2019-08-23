@@ -3,17 +3,14 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
 import Navbar from "../components/Navbar";
 import "../components/all.scss";
 import Tjenester from "../components/Tjenester";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const IndexPageTemplate = ({
   title,
   subtitle,
-  heroimage,
+  forsidebilde,
   heading,
   subheading,
   info,
@@ -24,9 +21,9 @@ export const IndexPageTemplate = ({
       className='full-width-image-container margin-top-0 site-hero'
       style={{
         backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${
-          !!heroimage.childImageSharp
-            ? heroimage.childImageSharp.fluid.src
-            : heroimage
+          !!forsidebilde.childImageSharp
+            ? forsidebilde.childImageSharp.fluid.src
+            : forsidebilde
         })`
       }}
     >
@@ -55,7 +52,7 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  heroimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  forsidebilde: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
   subheading: PropTypes.string,
   info: PropTypes.object,
@@ -70,7 +67,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         title={frontmatter.title}
         subtitle={frontmatter.subtitle}
-        heroimage={frontmatter.heroimage}
+        forsidebilde={frontmatter.forsidebilde}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         info={frontmatter.info}
@@ -96,7 +93,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
-        heroimage {
+        forsidebilde {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid

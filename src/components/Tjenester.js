@@ -6,7 +6,7 @@ export default function Tjenester() {
       <div className='container'>
         <div className='columns'>
           <div className='column' id='column1'>
-            Flere av våre tjenester
+            Flere av våre tjenester!
           </div>
           <div className='column' id='column2'>
             Rustfritt rekkverk
