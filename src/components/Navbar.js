@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import Logo from "../img/Logo.png";
+import "./all.scss";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -41,12 +42,16 @@ const Navbar = class extends React.Component {
         <div className='container'>
           <div className='navbar-brand'>
             <Link to='/' className='navbar-item' title='Logo'>
-              <img src={Logo} alt='Eivind Hope AS' style={{ width: "100px" }} />
+              <img
+                src={Logo}
+                alt='Eivind Hope AS'
+                style={{ maxHeight: "50px", width: "auto" }}
+              />
             </Link>
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target='navMenu'
+              data-target='navMenu is-white'
               onClick={() => this.toggleHamburger()}
             >
               <span />
@@ -59,6 +64,9 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className='navbar-end has-text-centered'>
+              <Link className='navbar-item' to='/'>
+                Heim
+              </Link>
               <Link className='navbar-item' to='/automatisk-industrimaskin'>
                 Automatisk industrimaskin
               </Link>

@@ -1,5 +1,5 @@
 ---
-templateKey: liftutleie-page
+templateKey: aluminiumsrenner-page
 title: Aluminiumsrenner, pipehatter og beslag
 image: /img/forsidebilde.jpg
 heading: Aluminiumsrenner, pipehatter og beslag

@@ -30,7 +30,7 @@ collections:
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Forside"
         name: "index"
         fields:
           - {
@@ -39,81 +39,13 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-          - {
-              label: Mainpitch,
-              name: mainpitch,
-              widget: object,
-              fields:
-                [
-                  { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - { label: Description, name: description, widget: string }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                      ],
-                  },
-                ],
-            }
-          - {
-              label: Main,
-              name: main,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image2,
-                    name: image2,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image3,
-                    name: image3,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
-            }
+          - { label: "Tittel", name: "title", widget: "string" }
+          - { label: "Undertittel", name: "subtitle", widget: "string" }
+          - { label: "Forsidebilde", name: "heroimage", widget: image }
+          - { label: "Firmanavn", name: "heading", widget: "string" }
+          - { label: "Firmainfo", name: "subheading", widget: "string" }
+          - { label: "Mer info", name: "info", widget: "string" }
+          - { label: "Bilde", name: "image", widget: "image" }
       - file: "src/pages/liftutleie/index.md"
         label: "Liftutleie"
         name: "liftutleie"
@@ -129,7 +61,7 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
-       - file: "src/pages/automatisk-industrimaskin/index.md"
+      - file: "src/pages/automatisk-industrimaskin/index.md"
         label: "Automatisk Industrimaskin"
         name: "automatisk-industrimaskin"
         fields:
@@ -137,14 +69,14 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "liftutleie-page",
+              default: "automatisk-industrimaskin-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: Image, name: image, widget: image }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
-       - file: "src/pages/rustfritt-rekkverk/index.md"
+      - file: "src/pages/rustfritt-rekkverk/index.md"
         label: "Rustfritt Rekkverk"
         name: "rustfritt-rekkverk"
         fields:
@@ -152,14 +84,14 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "liftutleie-page",
+              default: "rustfritt-rekkverk-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: Image, name: image, widget: image }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
-       - file: "src/pages/om-oss/index.md"
+      - file: "src/pages/om-oss/index.md"
         label: "Om Oss"
         name: "om-oss"
         fields:
@@ -174,7 +106,7 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
-       - file: "src/pages/kontakt/index.md"
+      - file: "src/pages/kontakt/index.md"
         label: "Kontakt"
         name: "kontakt"
         fields:
@@ -189,7 +121,7 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - { label: "Technical Info", name: "technicalInfo", widget: "string" }
-       - file: "src/pages/aluminiumsrenner/index.md"
+      - file: "src/pages/aluminiumsrenner/index.md"
         label: "Aluminiumsrenner"
         name: "aluminiumsrenner"
         fields:
@@ -197,7 +129,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "liftutleie-page",
+              default: "aluminiumsrenner-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: Image, name: image, widget: image }

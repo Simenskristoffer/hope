@@ -1,5 +1,5 @@
 ---
-templateKey: liftutleie-page
+templateKey: rustfritt-rekkverk-page
 title: Rustfritt rekkverk
 image: /img/forsidebilde.jpg
 heading: Rustfritt rekkverk

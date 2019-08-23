@@ -2,26 +2,19 @@ import React from "react";
 
 export default function Tjenester() {
   return (
-    <section className='section is-medium'>
+    <section className='section is-large' id='tjenester'>
       <div className='container'>
         <div className='columns'>
-          <div className='column'>Flere av våre tjenester</div>
-          <div
-            className='column'
-            style={{ background: "#01468a", color: "white", height: "20rem" }}
-          >
-            Alininiumsrenner, pipehatter og beslag
+          <div className='column' id='column1'>
+            Flere av våre tjenester
           </div>
-          <div
-            className='column'
-            style={{ background: "#1a5b9b", color: "white", height: "20rem" }}
-          >
-            Liftutleie
+          <div className='column' id='column2'>
+            Rustfritt rekkverk
           </div>
-          <div
-            className='column'
-            style={{ background: "#4887c7", color: "white", height: "20rem" }}
-          >
+          <div className='column' id='column3'>
+            Aluminiumsrenner, pipehatter og beslag
+          </div>
+          <div className='column' id='column4'>
             Automatisk industrimaskin
           </div>
         </div>

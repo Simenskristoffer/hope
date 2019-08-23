@@ -1,5 +1,5 @@
 ---
-templateKey: liftutleie-page
+templateKey: automatisk-industrimaskin-page
 title: Automatisk industrimaskin
 image: /img/forsidebilde.jpg
 heading: Automatisk industrimaskin
