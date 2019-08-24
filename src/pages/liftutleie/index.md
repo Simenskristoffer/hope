@@ -16,5 +16,6 @@ allImages:
   - /img/chemex.jpg
   - /img/chemex.jpg
   - /img/chemex.jpg
+  - /img/flavor_wheel.jpg
 ---
 
