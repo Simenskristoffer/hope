@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Navbar from "../components/Navbar";
 import Tjenester from "../components/Tjenester";
+import Hero from "../components/Hero";
 
 export const LiftutleiePageTemplate = ({
   title,
@@ -15,19 +15,7 @@ export const LiftutleiePageTemplate = ({
   image
 }) => (
   <div className='content'>
-    <div
-      className='full-width-image-container margin-top-0 site-hero'
-      style={{
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${
-          !!forsidebilde.childImageSharp
-            ? forsidebilde.childImageSharp.fluid.src
-            : forsidebilde
-        })`
-      }}
-    >
-      <Navbar />
-      <h2 className='has-text-weight-bold is-size-2'>{title}</h2>
-    </div>
+    <Hero title={title} img={forsidebilde} />
     <section className='section is-large'>
       <div className='container has-text-centered'>
         <h1 className='title heading' style={{ color: "#515B69" }}>
@@ -85,7 +73,7 @@ export const pageQuery = graphql`
         forsidebilde {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

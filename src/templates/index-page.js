@@ -4,9 +4,9 @@ import { Link, graphql } from "gatsby";
 import Helmet from "react-helmet";
 
 import Layout from "../components/Layout";
-import Navbar from "../components/Navbar";
 import "../components/all.scss";
 import Tjenester from "../components/Tjenester";
+import Hero from "../components/Hero";
 
 export const IndexPageTemplate = ({
   title,
@@ -24,20 +24,7 @@ export const IndexPageTemplate = ({
       <title>{`Eivind Hope AS - ${title}`}</title>
       <meta name='description' content={seoDescription} />
     </Helmet>
-    <div
-      className='full-width-image-container margin-top-0 site-hero'
-      style={{
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${
-          !!forsidebilde.childImageSharp
-            ? forsidebilde.childImageSharp.fluid.src
-            : forsidebilde
-        })`
-      }}
-    >
-      <Navbar />
-      <h2 className='has-text-weight-bold is-size-2'>{title}</h2>
-      <h3>{subtitle}</h3>
-    </div>
+    <Hero title={title} subtitle={subtitle} img={forsidebilde} />
     <div className='container'>
       <section className='section is-large' id='companyInfo'>
         <div className='columns'>
