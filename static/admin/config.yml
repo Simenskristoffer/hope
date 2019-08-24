@@ -46,6 +46,11 @@ collections:
           - { label: "Firmainfo", name: "subheading", widget: "string" }
           - { label: "Mer info", name: "info", widget: "string" }
           - { label: "Bilde", name: "image", widget: "image" }
+          - {
+              label: "SEO beskrivelse av siden",
+              name: "seoDescription",
+              widget: "text",
+            }
       - file: "src/pages/liftutleie/index.md"
         label: "Liftutleie"
         name: "liftutleie"

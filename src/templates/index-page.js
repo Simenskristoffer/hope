@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import Helmet from "react-helmet";
 
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
@@ -11,12 +12,18 @@ export const IndexPageTemplate = ({
   title,
   subtitle,
   forsidebilde,
+  seoDescription,
   heading,
   subheading,
   info,
   image
 }) => (
   <div className='content'>
+    <Helmet>
+      <meta charSet='utf-8' />
+      <title>{`Eivind Hope AS - ${title}`}</title>
+      <meta name='description' content={seoDescription} />
+    </Helmet>
     <div
       className='full-width-image-container margin-top-0 site-hero'
       style={{
@@ -52,6 +59,7 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
+  seoDescription: PropTypes.string,
   forsidebilde: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -70,6 +78,7 @@ const IndexPage = ({ data }) => {
         forsidebilde={frontmatter.forsidebilde}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
+        seoDescription={frontmatter.seoDescription}
         info={frontmatter.info}
         image={frontmatter.image}
       />
@@ -100,6 +109,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        seoDescription
         heading
         subheading
         info
