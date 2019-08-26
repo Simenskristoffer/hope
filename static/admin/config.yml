@@ -131,7 +131,7 @@ collections:
               - { label: "Navn", name: "name", widget: "string" }
               - { label: "Info", name: "info", widget: "string" }
               - { label: "Bilde", name: "img", widget: "image" }
-              - { label: "Telefonnr", name: "number", widget: "string" }
+              - { label: "Telefonnr", name: "mobile", widget: "string" }
 
       - file: "src/pages/aluminiumsrenner/index.md"
         label: "Aluminiumsrenner"
