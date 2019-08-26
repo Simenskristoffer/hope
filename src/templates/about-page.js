@@ -129,6 +129,7 @@ export const pageQuery = graphql`
         team {
           name
           info
+          mobile
           img {
             childImageSharp {
               fluid(maxWidth: 2000, quality: 64) {

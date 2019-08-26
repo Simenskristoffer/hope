@@ -14,6 +14,7 @@ const Employees = ({ team }) => {
               name={employee.name}
               img={employee.img}
               info={employee.info}
+              mobile={employee.mobile}
             />
           ))}
         </div>
@@ -22,18 +23,22 @@ const Employees = ({ team }) => {
   );
 };
 
-const Employee = ({ img, name, info }) => (
+const Employee = ({ img, name, info, mobile }) => (
   <div className='column is-4'>
     <Img fluid={img.childImageSharp.fluid} alt={name} />
     <h3 className='subtitle has-text-centered'>{name}</h3>
     <p className='employeeInfo'>{info}</p>
+    <a href={"tel:" + mobile}>
+      <p>TLF: {mobile}</p>
+    </a>
   </div>
 );
 
 Employee.propTypes = {
   name: PropTypes.string,
   img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  info: PropTypes.string
+  info: PropTypes.string,
+  mobile: PropTypes.string
 };
 
 Employees.propTypes = {
@@ -41,7 +46,8 @@ Employees.propTypes = {
     PropTypes.shape({
       img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
-      info: PropTypes.string
+      info: PropTypes.string,
+      mobile: PropTypes.string
     })
   )
 };

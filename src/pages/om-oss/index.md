@@ -21,15 +21,18 @@ team:
     name: Eivind Hope
     info: >-
       Eivind tegner, konstruerer, og er med å produsere og montere det meste av ting som me lagar av rekkverk, maskiner, og ellers alt som folk måtte spørja om.
+    mobile: 48 14 88 89
   - img: /img/chemex.jpg
     name: Jenny Elin
     info: >-
       Jenny Elin knekker det meste av beslag, og leverer det og takrenner til kunder.
       Ho lager og pipekledninger,har kontorarbeid,og er med ute og monterer rustfrie rekkverk når det trengs.
+    mobile: 95 21 62 44
   - img: /img/chemex.jpg
     name: Petter
     info: >-
       Petter er nordsjøarbeider ,og hjelper oss når han har friperiode.
       Han monterer mykje beslag, pipekledninger og rustfrie rekkverk.
       Arbeider med dreiebenk, fres, sveising, og kan brukast til alt.
+    mobile: 93 89 59 89
 ---

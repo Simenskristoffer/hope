@@ -104,20 +104,35 @@ collections:
             widget: "list"
             field: { label: Bilde, name: image, widget: image }
       - file: "src/pages/kontakt/index.md"
-        label: "Kontakt"
+        label: "Kontaktside"
         name: "kontakt"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "liftutleie-page",
+              default: "contact-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: forsidebilde, widget: image }
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Subheading", name: "subheading", widget: "string" }
-          - { label: "Technical Info", name: "technicalInfo", widget: "string" }
+          - { label: "Sidetittel", name: "title", widget: "string" }
+          - { label: "Undertittel", name: "subtitle", widget: "string" }
+          - {
+              label: "SEO beskrivelse",
+              name: "seoDescription",
+              widget: "string",
+            }
+          - { label: "Forsidebilde", name: forsidebilde, widget: image }
+          - { label: "Mail adresse", name: "email", widget: "string" }
+          - { label: "Mobilnr", name: "phone", widget: "string" }
+          - { label: "Telefonnr", name: "phone1", widget: "string" }
+          - label: "Ansatte"
+            name: "team"
+            widget: "list"
+            fields:
+              - { label: "Navn", name: "name", widget: "string" }
+              - { label: "Info", name: "info", widget: "string" }
+              - { label: "Bilde", name: "img", widget: "image" }
+              - { label: "Telefonnr", name: "number", widget: "string" }
+
       - file: "src/pages/aluminiumsrenner/index.md"
         label: "Aluminiumsrenner"
         name: "aluminiumsrenner"
@@ -166,3 +181,4 @@ collections:
               - { label: "Navn", name: "name", widget: "string" }
               - { label: "Info", name: "info", widget: "string" }
               - { label: "Bilde", name: "img", widget: "image" }
+              - { label: "Telefonnr", name: "number", widget: "string" }
