@@ -152,9 +152,9 @@ collections:
             name: "allImages"
             widget: "list"
             field: { label: Bilde, name: image, widget: image }
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/om-oss/index.md"
+        label: "Om Oss"
+        name: "om-oss"
         fields:
           - {
               label: "Template Key",
@@ -162,5 +162,21 @@ collections:
               widget: "hidden",
               default: "about-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Sidetittel", name: "title", widget: "string" }
+          - { label: Forsidebilde, name: forsidebilde, widget: image }
+          - { label: Undertittel, name: subtitle, widget: string }
+          - { label: "Overskrift", name: "heading", widget: "string" }
+          - { label: "Undertekst", name: "subheading", widget: "string" }
+          - { label: "Info", name: "technicalInfo", widget: "string" }
+          - label: "Produkter"
+            name: "products"
+            widget: list
+            fields:
+          - { label: "Tjenester", name: products, widget: list }
+          - label: "Ansatte"
+            name: "team"
+            widget: "list"
+            fields:
+              - { label: "Navn", name: "name", widget: "string" }
+              - { label: "Info", name: "info", widget: "string" }
+              - { label: "Bilde", name: "img", widget: "image" }

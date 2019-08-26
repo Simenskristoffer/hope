@@ -20,36 +20,42 @@ export const AboutPageTemplate = ({
   pageImage,
   products,
   team
-}) => (
-  <div className='content'>
-    <Helmet>
-      <meta charSet='utf-8' />
-      <title>{`Eivind Hope AS - ${title}`}</title>
-      <meta name='description' content={seoDescription} />
-    </Helmet>
-    <Hero title={title} subtitle={subtitle} img={forsidebilde} />
-    <div className='container'>
-      <section className='section is-large' id='companyInfo'>
-        <div className='columns'>
-          <div className='column'>
-            <h1>{heading}</h1>
-            <h2>{subheading}</h2>
-            <p>{technicalInfo}</p>
-            <ul>
-              {products.map(product => (
-                <li className='has-text-left'>{product}</li>
-              ))}
-            </ul>
+}) => {
+  return (
+    <div className='content'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>{`Eivind Hope AS - ${title}`}</title>
+        <meta name='description' content={seoDescription} />
+      </Helmet>
+      <Hero title={title} subtitle={subtitle} img={forsidebilde} />
+      <div className='container'>
+        <section className='section is-large' id='companyInfo'>
+          <div className='columns'>
+            <div className='column'>
+              <h1>{heading}</h1>
+              <h2>{subheading}</h2>
+              <p>{technicalInfo}</p>
+              <ul>
+                {products.map(product => (
+                  <li className='has-text-left'>{product}</li>
+                ))}
+              </ul>
+            </div>
+            {pageImage ? (
+              <div className='column'>
+                <Img fluid={pageImage.childImageSharp.fluid} />
+              </div>
+            ) : (
+              <div className='column'></div>
+            )}
           </div>
-          <div className='column'>
-            <Img fluid={pageImage.childImageSharp.fluid} />
-          </div>
-        </div>
-      </section>
-      <Employees team={team} />
+        </section>
+        <Employees team={team} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string,
