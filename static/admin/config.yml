@@ -150,6 +150,7 @@ collections:
           - { label: "Sidetittel", name: "title", widget: "string" }
           - { label: Forsidebilde, name: forsidebilde, widget: image }
           - { label: Undertittel, name: subtitle, widget: string }
+          - { label: SEO beskrivelse, name: seoDescription, widget: string }
           - { label: "Overskrift", name: "heading", widget: "string" }
           - { label: "Undertekst", name: "subheading", widget: "string" }
           - { label: "Info", name: "technicalInfo", widget: "string" }
