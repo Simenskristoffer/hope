@@ -1,63 +1,137 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Helmet from "react-helmet";
+import Img from "gatsby-image";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+import Layout from "../components/Layout";
+import "../components/all.scss";
+import Employees from "../components/Employees";
+import Hero from "../components/Hero";
 
-  return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
+export const AboutPageTemplate = ({
+  title,
+  subtitle,
+  forsidebilde,
+  seoDescription,
+  heading,
+  subheading,
+  technicalInfo,
+  pageImage,
+  products,
+  team
+}) => (
+  <div className='content'>
+    <Helmet>
+      <meta charSet='utf-8' />
+      <title>{`Eivind Hope AS - ${title}`}</title>
+      <meta name='description' content={seoDescription} />
+    </Helmet>
+    <Hero title={title} subtitle={subtitle} img={forsidebilde} />
+    <div className='container'>
+      <section className='section is-large' id='companyInfo'>
+        <div className='columns'>
+          <div className='column'>
+            <h1>{heading}</h1>
+            <h2>{subheading}</h2>
+            <p>{technicalInfo}</p>
+            <ul>
+              {products.map(product => (
+                <li className='has-text-left'>{product}</li>
+              ))}
+            </ul>
+          </div>
+          <div className='column'>
+            <Img fluid={pageImage.childImageSharp.fluid} />
           </div>
         </div>
-      </div>
-    </section>
-  )
-}
+      </section>
+      <Employees team={team} />
+    </div>
+  </div>
+);
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  seoDescription: PropTypes.string,
+  forsidebilde: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  technicalInfo: PropTypes.string,
+  pageImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  team: PropTypes.array,
+  products: PropTypes.array
+};
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={frontmatter.title}
+        subtitle={frontmatter.subtitle}
+        forsidebilde={frontmatter.forsidebilde}
+        heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
+        seoDescription={frontmatter.seoDescription}
+        technicalInfo={frontmatter.technicalInfo}
+        pageImage={frontmatter.pageImage}
+        team={frontmatter.team}
+        products={frontmatter.products}
       />
     </Layout>
-  )
-}
+  );
+};
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object
+    })
+  })
+};
 
-export default AboutPage
+export default AboutPage;
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const pageQuery = graphql`
+  query AboutPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
+        seoDescription
         title
+        subtitle
+        forsidebilde {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        heading
+        subheading
+        pageImage {
+          childImageSharp {
+            fluid(maxWidth: 2000, quality: 64) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        technicalInfo
+        products
+        team {
+          name
+          info
+          img {
+            childImageSharp {
+              fluid(maxWidth: 2000, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }
-`
+`;

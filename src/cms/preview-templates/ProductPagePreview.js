@@ -9,7 +9,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
     return (
       <ProductPageTemplate
         title={data.title}
-        forsidebilde={data.image}
+        forsidebilde={data.forsidebilde}
         heading={data.heading}
         technicalInfo={data.technicalInfo}
         subheading={data.subheading}
