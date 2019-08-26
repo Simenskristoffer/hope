@@ -101,9 +101,11 @@ $footer-content: #aaaaaa;
 
 // ---------- EMPLOYEES COMPONENT ---------//
 
-.wrapper {
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-auto-rows: minmax(70px, auto);
+#employees {
+  .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: minmax(70px, auto);
+  }
 }
 
 // ---------- FOOTER COMPONENT ---------//

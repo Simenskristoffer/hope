@@ -17,6 +17,8 @@ const AboutPagePreview = ({ entry, getAsset }) => {
         subheading={data.subheading}
         pageImage={data.pageImage}
         products={data.products}
+        team={data.team}
+        img={data.img}
       />
     );
   } else {
