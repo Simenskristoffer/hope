@@ -29,7 +29,7 @@ export default class Portfolio extends Component {
     console.log(this.getReactImagesArray(imageObjects));
     return (
       <>
-        <section className='section'>
+        <section className='section images'>
           <div className='container'>
             <h1>Bilder</h1>
             <div className='columns is-multiline'>
