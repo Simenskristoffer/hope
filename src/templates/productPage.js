@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+import Helmet from "react-helmet";
 
 import Layout from "../components/Layout";
 import Tjenester from "../components/Tjenester";
@@ -13,10 +14,16 @@ export const ProductPageTemplate = ({
   forsidebilde,
   technicalInfo,
   subheading,
-  images
+  images,
+  seoDescription
 }) => {
   return (
     <div className='content'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>{`Eivind Hope AS - ${title}`}</title>
+        <meta name='description' content={seoDescription} />
+      </Helmet>
       <Hero title={title} img={forsidebilde} />
       <section className='section is-large' id='productSection'>
         <div className='container has-text-centered'>
@@ -41,6 +48,7 @@ export const ProductPageTemplate = ({
 
 ProductPageTemplate.propTypes = {
   title: PropTypes.string,
+  seoDescription: PropTypes.string,
   forsidebilde: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -56,6 +64,7 @@ const ProductPage = ({ data }) => {
       <ProductPageTemplate
         forsidebilde={frontmatter.forsidebilde}
         title={frontmatter.title}
+        seoDescription={frontmatter.seoDescription}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         technicalInfo={frontmatter.technicalInfo}
@@ -80,6 +89,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        seoDescription
         forsidebilde {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

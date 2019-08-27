@@ -31,7 +31,7 @@ export default class Portfolio extends Component {
       <>
         <section className='section'>
           <div className='container'>
-            <h1>{title}</h1>
+            <h1>Bilder</h1>
             <div className='columns is-multiline'>
               {imageObjects.map((image, index) => (
                 <div

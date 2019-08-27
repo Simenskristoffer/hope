@@ -1,6 +1,7 @@
 ---
 templateKey: productPage
 title: Rustfritt rekkverk
+seoDescription: Eivind Hope 10 års erfaring med rustfrie rekkverk
 forsidebilde: /img/forsidebilde.jpg
 heading: Rustfritt rekkverk
 subheading: Kun fantasien setter stopper!
