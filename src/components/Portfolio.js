@@ -25,7 +25,7 @@ export default class Portfolio extends Component {
   }
   render() {
     const { currentImageIndex } = this.state;
-    const { imageObjects, title } = this.props;
+    const { imageObjects } = this.props;
     console.log(this.getReactImagesArray(imageObjects));
     return (
       <>
@@ -39,8 +39,10 @@ export default class Portfolio extends Component {
                   className='column is-3'
                   onClick={() => this.toggleModal(index)}
                 >
-                  <img src={image.url} />
-                  <Img fluid={image.childImageSharp.fluid} />
+                  <Img
+                    fluid={image.childImageSharp.fluid}
+                    alt='Eivind Hope produkter'
+                  />
                 </div>
               ))}
             </div>

@@ -6,7 +6,7 @@ const Employees = ({ team }) => {
   return (
     <section id='employees' className='section'>
       <div id='team' className='container'>
-        <h1 className='has-text-centered'></h1>
+        <h1 className='has-text-centered'>Vårt team</h1>
         <div className='columns is-multiline'>
           {team.map(employee => (
             <Employee

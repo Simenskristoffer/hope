@@ -9,5 +9,5 @@ heading: Eivind Hope AS - din blikkenslager
 subheading: Familiebedrift i Rubbestadneset på Bømlo
 info: >-
   Her kan du finne informasjon om oss og våre tjenester, i tillegg til bilder og inspirasjon for deg som kunde.
-image: /img/forsidebilde.jpg
+image: /img/home-img-1.jpg
 ---

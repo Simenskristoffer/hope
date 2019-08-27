@@ -96,7 +96,7 @@ $product-section-p: #7f8795;
 }
 
 .section {
-  padding: 10rem 1.5rem !important;
+  padding: 7rem 1.5rem !important;
 }
 
 // ---------- FRONTPAGE ---------//
@@ -234,6 +234,13 @@ $product-section-p: #7f8795;
 }
 // ---------- TEAM COMPONENT ---------//
 #team {
+  h1 {
+    font-family: $openSans !important;
+    color: $company-info-h1-color !important;
+    font-weight: 300 !important;
+    font-size: 50px !important;
+    padding-bottom: 3rem;
+  }
   h3 {
     font-family: $openSans !important;
     color: $company-info-h1-color !important;

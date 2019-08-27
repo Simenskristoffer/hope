@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import Img from "gatsby-image";
 
 import Layout from "../components/Layout";
 import "../components/all.scss";
@@ -34,7 +35,7 @@ export const IndexPageTemplate = ({
             <p>{info}</p>
           </div>
           <div className='column'>
-            <img src='https://hope.as/wp-content/uploads/2017/04/home-img-1-600x450.jpg' />
+            <Img fluid={image.childImageSharp.fluid} alt='Eivind Hope AS' />
           </div>
         </div>
       </section>

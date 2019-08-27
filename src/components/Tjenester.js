@@ -12,7 +12,7 @@ export default function Tjenester() {
           <div className='column' id='column2'>
             <Link to='/rustfritt-rekkverk'>
               Rustfritt rekkverk
-              <img src='/img/fence-icon.png' />
+              <img src='/img/fence-icon.png' alt='Rustfritt Rekkverk' />
             </Link>
           </div>
           <div className='column' id='column3'>
@@ -22,13 +22,17 @@ export default function Tjenester() {
               <img
                 src='/img/aluminiumsrenner-icon.png'
                 className='is-centered'
+                alt='Aluminiumsrenner'
               />
             </Link>
           </div>
           <div className='column' id='column4'>
             <Link to='/automatisk-industrimaskin'>
               Automatisk industrimaskin
-              <img src='/img/industrimaskin-icon.png' />
+              <img
+                src='/img/industrimaskin-icon.png'
+                alt='Automatisk Industrimaskin'
+              />
             </Link>
           </div>
         </div>
