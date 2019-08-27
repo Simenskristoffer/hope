@@ -18,7 +18,7 @@ export const ProductPageTemplate = ({
   return (
     <div className='content'>
       <Hero title={title} img={forsidebilde} />
-      <section className='section is-large'>
+      <section className='section is-large' id='productSection'>
         <div className='container has-text-centered'>
           <h1 className='title heading' style={{ color: "#515B69" }}>
             {heading}

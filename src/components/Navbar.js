@@ -88,12 +88,6 @@ const Navbar = class extends React.Component {
               <Link className='navbar-item nav-links' to='/kontakt'>
                 Kontakt
               </Link>
-              <Link className='navbar-item nav-links' to='/contact'>
-                Contact
-              </Link>
-              <Link className='navbar-item nav-links' to='/contact/examples'>
-                Form Examples
-              </Link>
             </div>
           </div>
         </div>

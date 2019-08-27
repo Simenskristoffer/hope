@@ -29,7 +29,7 @@ const Employee = ({ img, name, info, mobile }) => (
     <h3 className='subtitle has-text-centered'>{name}</h3>
     <p className='employeeInfo'>{info}</p>
     <a href={"tel:" + mobile}>
-      <p>TLF: {mobile}</p>
+      <p className='phoneNumber'>TLF: {mobile}</p>
     </a>
   </div>
 );

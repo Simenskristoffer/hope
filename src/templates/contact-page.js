@@ -37,23 +37,13 @@ export const ContactPageTemplate = ({
         <section className='section is-large' id='contact'>
           <div className='columns'>
             <div className='column has-text-centered'>
-              <TiLocation
-                size={60}
-                style={{
-                  border: "1px solid",
-                  borderRadius: "5px",
-                  borderSpacing: "15px"
-                }}
-              />
+              <TiLocation size={60} />
               <h2 className='title'>Adresse</h2>
               <p className='subtitle'>{adress}</p>
             </div>
             <a className='subtitle' href={"mailto:" + email}>
               <div className='column has-text-centered'>
-                <IoMdMail
-                  size={60}
-                  style={{ border: "1px solid", borderRadius: "5px" }}
-                />
+                <IoMdMail size={60} />
                 <h2 className='title'>E-post</h2>
                 <p className='subtitle'>
                   <a className='subtitle' href={"mailto:" + email}>
@@ -64,13 +54,7 @@ export const ContactPageTemplate = ({
             </a>
             <div className='column has-text-centered'>
               <a href={"tel:" + phone}>
-                <TiPhone
-                  size={60}
-                  style={{
-                    border: "1px solid",
-                    borderRadius: "5px"
-                  }}
-                />
+                <TiPhone size={60} />
               </a>
               <h2 className='title'>Telefon</h2>
               <p className='subtitle'>Ring oss</p>

@@ -1,10 +1,22 @@
 @import "~bulma/sass/utilities/initial-variables";
 
+//Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+//Fonts variabels
+$openSans: "Open Sans", sans-serif;
 //Color variabels
 $white: #ffffff;
 $footer-background: #222222;
 $footer-content: #aaaaaa;
+$company-info-h2-color: #89919f;
+$company-info-h1-color: #515b69;
+$company-info-p-color: #89919f;
+$product-section-h1: #515b69;
+$product-section-h2: #89919f;
+$product-section-p: #7f8795;
 
+// ---------- NAVBAR COMPONENT ---------//
 .navbar {
   position: absolute !important;
   top: 0;
@@ -17,9 +29,36 @@ $footer-content: #aaaaaa;
   }
   .navbar-item {
     color: $white;
+    font-size: 16px;
+    font-family: $openSans;
+  }
+  .navbar-item:hover {
+    color: $white;
+  }
+  .navbar-item::after {
+    content: "";
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: $white !important;
+    -webkit-transform: scaleX(0) !important;
+    transform: scaleX(0) !important;
+    -webkit-transform-origin: right !important;
+    transform-origin: right !important;
+    transition: -webkit-transform 250ms ease-in !important;
+    transition: transform 250ms ease-in !important;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in !important;
+  }
+  .navbar-item:hover::after {
+    -webkit-transform: scaleX(1) !important;
+    transform: scaleX(1) !important;
+    -webkit-transform-origin: left !important;
+    transform-origin: left !important;
   }
 }
-
+// ---------- HERO COMPONENT ---------//
 .full-width-image-container {
   width: 100vw;
   height: 650px;
@@ -35,17 +74,24 @@ $footer-content: #aaaaaa;
 
   h2 {
     color: $white !important;
-    padding: "1rem";
+    padding: 1rem !important;
     text-align: center;
+    font-size: 70px !important;
+    font-family: $openSans;
+    font-weight: 300 !important;
   }
   h3 {
     color: $white !important;
-    padding: 1rem;
-    font-size: 24px;
+    padding: 1rem !important;
+    font-size: 24px !important;
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 55%;
     text-align: center;
+    font-family: $openSans;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 300 !important;
   }
 }
 
@@ -61,17 +107,48 @@ $footer-content: #aaaaaa;
     padding: 1em;
   }
   h1 {
-    font-size: 50px;
-    color: #515b69;
+    font-size: 50px !important;
+    color: $company-info-h1-color;
     padding-bottom: 1rem;
+    font-family: $openSans;
+    font-weight: 300;
   }
   h2 {
-    color: #89919f;
-    font-size: 28px;
+    color: $company-info-h2-color;
+    font-size: 28px !important;
+    font-family: $openSans;
+    font-weight: 300;
   }
   p {
-    color: #89919f;
-    font-size: 20px;
+    color: $company-info-p-color;
+    font-family: $openSans;
+    font-weight: 300;
+    font-size: 22px;
+    margin-top: 3rem;
+  }
+}
+
+// ---------- PRODUCT SECTION ---------//
+#productSection {
+  h1 {
+    font-family: $openSans;
+    font-size: 50px;
+    color: $product-section-h1;
+    padding-bottom: 2rem;
+    font-weight: 300;
+  }
+  h2 {
+    font-family: $openSans;
+    font-size: 28px;
+    font-weight: 300;
+    color: $product-section-h2;
+    padding-bottom: 2rem;
+  }
+  p {
+    font-family: $openSans;
+    font-size: 22px;
+    font-weight: 300;
+    color: $product-section-p;
   }
 }
 
@@ -81,12 +158,18 @@ $footer-content: #aaaaaa;
     text-align: center;
     color: $white;
     font-size: 40px;
+    font-family: $openSans;
+    font-weight: 300;
   }
   .column {
-    height: 20rem;
+    height: 25rem;
+    vertical-align: top;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   #column1 {
     color: #515b69;
+    font-style: italic;
   }
   #column2 {
     background-color: #1a5b9b;
@@ -97,8 +180,18 @@ $footer-content: #aaaaaa;
   #column4 {
     background-color: #4887c7;
   }
-}
+  img {
+    margin-top: 2rem;
+  }
+  a {
+    color: $white;
+  }
 
+  .column:hover {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
 // ---------- EMPLOYEES COMPONENT ---------//
 
 #employees {
@@ -117,13 +210,57 @@ $footer-content: #aaaaaa;
 
 // ---------- CONTACT PAGE ---------//
 #contact {
+  h2 {
+    font-size: 32px !important;
+    font-family: $openSans !important;
+    font-weight: 300 !important;
+    padding-bottom: 2rem;
+    color: $company-info-h1-color !important;
+  }
+  p {
+    font-size: 22px !important;
+    font-family: $openSans;
+    font-weight: 300 !important;
+    color: $company-info-h1-color !important;
+  }
   a {
-    color: #4a4a4a;
+    color: $company-info-h1-color;
     transition: transform 0.5s !important;
   }
   a:hover {
     transform: scale(0.95) !important;
+    color: $company-info-p-color;
   }
+}
+// ---------- TEAM COMPONENT ---------//
+#team {
+  h3 {
+    font-family: $openSans !important;
+    color: $company-info-h1-color !important;
+    font-weight: 300 !important;
+    font-size: 28px !important;
+  }
+  p {
+    font-family: $openSans !important;
+    font-size: 22px !important;
+    font-weight: 300 !important;
+    color: $company-info-p-color;
+  }
+  .phoneNumber {
+    color: $company-info-h1-color;
+  }
+  .phoneNumber:hover {
+    color: $company-info-p-color;
+  }
+}
+
+// ---------- ABOUT PAGE ---------//
+
+li {
+  font-family: $openSans;
+  font-size: 22px;
+  font-weight: 300;
+  color: $company-info-p-color;
 }
 
 // ---------- FOOTER COMPONENT ---------//
@@ -145,10 +282,15 @@ footer {
   }
   .navbar-item {
     color: $footer-content !important;
+    font-family: $openSans !important;
+    font-weight: 300 !important;
   }
   .navbar-item:hover {
     background-color: $footer-background !important;
     color: $white !important;
+  }
+  ul {
+    list-style: none !important;
   }
   @media only screen and (max-width: 1020px) {
     .content ul {
