@@ -119,7 +119,7 @@ export const pageQuery = graphql`
         subheading
         pageImage {
           childImageSharp {
-            fluid(maxWidth: 2000, quality: 64) {
+            fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -132,7 +132,7 @@ export const pageQuery = graphql`
           mobile
           img {
             childImageSharp {
-              fluid(maxWidth: 2000, quality: 64) {
+              fluid(maxWidth: 2000, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }

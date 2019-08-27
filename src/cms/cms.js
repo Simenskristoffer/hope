@@ -2,8 +2,6 @@ import CMS from "netlify-cms-app";
 import uploadcare from "netlify-cms-media-library-uploadcare";
 import cloudinary from "netlify-cms-media-library-cloudinary";
 
-import BlogPostPreview from "./preview-templates/BlogPostPreview";
-
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
 import ProductPagePreview from "./preview-templates/ProductPagePreview";
 
@@ -15,5 +13,3 @@ CMS.registerPreviewTemplate("liftutleie", ProductPagePreview);
 CMS.registerPreviewTemplate("aluminiumsrenner", ProductPagePreview);
 CMS.registerPreviewTemplate("automatisk-industrimaskin", ProductPagePreview);
 CMS.registerPreviewTemplate("rustfritt-rekkverk", ProductPagePreview);
-
-CMS.registerPreviewTemplate("blog", BlogPostPreview);
