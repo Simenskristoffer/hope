@@ -132,7 +132,7 @@ export const pageQuery = graphql`
         forsidebilde {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -149,8 +149,8 @@ export const pageQuery = graphql`
           mobile
           img {
             childImageSharp {
-              fluid(maxWidth: 2000, quality: 64) {
-                ...GatsbyImageSharpFluid
+              fluid(maxWidth: 2000, quality: 100) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
