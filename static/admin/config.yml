@@ -104,6 +104,7 @@ collections:
               widget: "string",
             }
           - { label: "Forsidebilde", name: forsidebilde, widget: image }
+          - { label: "Adresse", name: "adress", widget: "string" }
           - { label: "Mail adresse", name: "email", widget: "string" }
           - { label: "Mobilnr", name: "phone", widget: "string" }
           - { label: "Telefonnr", name: "phone1", widget: "string" }
