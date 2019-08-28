@@ -18,6 +18,7 @@ allImages:
   - /img/chemex.jpg
   - /img/chemex.jpg
   - /img/chemex.jpg
+  - /img/home-img-2.jpg
   - /img/jumbotron.jpg
   - /img/blog-index.jpg
 ---
