@@ -1,8 +1,8 @@
 ---
 templateKey: productPage
-seoDescription: Eivind Hope tilbyr liftutleie Hei
-title: Liftutleie Hei
-forsidebilde: /img/home-img-1 .jpg
+seoDescription: Eivind Hope tilbyr liftutleie
+title: Liftutleie
+forsidebilde: /img/forsidebilde.jpg
 heading: 'Liftutleie '
 subheading: Grei manøvrering og veldig praktisk i høge høgder!
 technicalInfo: >-
@@ -17,6 +17,5 @@ allImages:
   - /img/chemex.jpg
   - /img/chemex.jpg
   - /img/chemex.jpg
-  - /img/eivind-hope.png
 ---
 
