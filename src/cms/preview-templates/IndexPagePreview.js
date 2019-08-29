@@ -13,7 +13,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         forsidebilde={data.forsidebilde}
         heading={data.heading}
         subheading={data.subheading}
-        image={data.image}
       />
     );
   } else {
