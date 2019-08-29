@@ -7,9 +7,11 @@ export default class Portfolio extends Component {
     super(props);
     this.state = {
       isModalOpen: false,
-      currentImageIndex: null
+      currentImageIndex: null,
+      imageNumber: 0
     };
   }
+
   toggleModal(index) {
     this.setState({ currentImageIndex: index });
   }
@@ -23,6 +25,7 @@ export default class Portfolio extends Component {
     }
     return newImageArray;
   }
+
   render() {
     const { currentImageIndex } = this.state;
     const { imageObjects } = this.props;
@@ -42,6 +45,7 @@ export default class Portfolio extends Component {
                   <Img
                     fluid={image.childImageSharp.fluid}
                     alt='Eivind Hope produkter'
+                    className='image-display'
                   />
                 </div>
               ))}

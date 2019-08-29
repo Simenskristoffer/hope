@@ -176,6 +176,18 @@ $product-section-p: #7f8795;
     color: $company-info-h1-color !important;
     text-align: center;
   }
+  .column {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .column:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+.css-zjq1i3 {
+  max-height: 70vh !important;
 }
 
 // ---------- TJENESTER COMPONENT ---------//
