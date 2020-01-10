@@ -13,6 +13,10 @@ const TemplateWrapper = ({ children }) => {
         <html lang='en' />
         <title>{title}</title>
         <meta name='description' content={description} />
+        <meta
+          name='google-site-verification'
+          content='XB1A7RHFoccOTpcV2iD9_6_k5_Elgz6YX0zTRBI3WQE'
+        />
 
         <link
           rel='eivind-hope-logo'
