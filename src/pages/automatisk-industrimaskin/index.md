@@ -8,6 +8,7 @@ subheading: >-
   Eivind har tatt forskjellige oppdrag innen maskineri og roboter. Har sidan
   1995 produsert ein del automatiske maskinar til industrien.
 technicalInfo: Følg med på vårt galleri under
-allImages: []
+allImages:
+  - /img/home-img-2.jpg
 ---
 
