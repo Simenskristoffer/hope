@@ -20,10 +20,25 @@ collections:
               default: "index-page",
             }
           - { label: "Tittel", name: "title", widget: "string" }
-          - { label: "Undertittel", name: "subtitle", widget: "string" }
+          - {
+              label: "Undertittel",
+              name: "subtitle",
+              widget: "string",
+              optional: true,
+            }
           - { label: "Forsidebilde", name: "forsidebilde", widget: image }
-          - { label: "Firmanavn", name: "heading", widget: "string" }
-          - { label: "Firmainfo", name: "subheading", widget: "string" }
+          - {
+              label: "Firmanavn",
+              name: "heading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Firmainfo",
+              name: "subheading",
+              widget: "string",
+              optional: true,
+            }
           - { label: "Mer info", name: "info", widget: "string" }
           - { label: "Bilde", name: "image", widget: "image" }
           - {
@@ -39,8 +54,18 @@ collections:
           - { label: SEO beskrivelse, name: seoDescription, widget: string }
           - { label: "Tittel", name: "title", widget: "string" }
           - { label: Forsidebilde, name: forsidebilde, widget: image }
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Subheading", name: "subheading", widget: "string" }
+          - {
+              label: "Heading",
+              name: "heading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Subheading",
+              name: "subheading",
+              widget: "string",
+              optional: true,
+            }
           - { label: "Teknisk info", name: "technicalInfo", widget: "string" }
           - label: "Galleri"
             name: "allImages"
@@ -59,9 +84,24 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: SEO beskrivelse, name: seoDescription, widget: string }
           - { label: Image, name: forsidebilde, widget: image }
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Subheading", name: "subheading", widget: "string" }
-          - { label: "Teknisk Info", name: "technicalInfo", widget: "string" }
+          - {
+              label: "Heading",
+              name: "heading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Subheading",
+              name: "subheading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Teknisk Info",
+              name: "technicalInfo",
+              widget: "string",
+              optional: true,
+            }
           - label: "Galleri"
             name: "allImages"
             widget: "list"
@@ -79,9 +119,24 @@ collections:
           - { label: "Tittel", name: "title", widget: "string" }
           - { label: SEO beskrivelse, name: seoDescription, widget: string }
           - { label: Forsidebilde, name: forsidebilde, widget: image }
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Subheading", name: "subheading", widget: "string" }
-          - { label: "Teknisk info", name: "technicalInfo", widget: "string" }
+          - {
+              label: "Heading",
+              name: "heading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Subheading",
+              name: "subheading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Teknisk info",
+              name: "technicalInfo",
+              widget: "string",
+              optional: true,
+            }
           - label: "Galleri"
             name: "allImages"
             widget: "list"
@@ -96,8 +151,18 @@ collections:
               widget: "hidden",
               default: "contact-page",
             }
-          - { label: "Sidetittel", name: "title", widget: "string" }
-          - { label: "Undertittel", name: "subtitle", widget: "string" }
+          - {
+              label: "Sidetittel",
+              name: "title",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Undertittel",
+              name: "subtitle",
+              widget: "string",
+              optional: true,
+            }
           - {
               label: "SEO beskrivelse",
               name: "seoDescription",
@@ -130,9 +195,24 @@ collections:
           - { label: "Tittel", name: "title", widget: "string" }
           - { label: SEO beskrivelse, name: seoDescription, widget: string }
           - { label: Forsidebilde, name: forsidebilde, widget: image }
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Subheading", name: "subheading", widget: "string" }
-          - { label: "Teknisk info", name: "technicalInfo", widget: "string" }
+          - {
+              label: "Heading",
+              name: "heading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Subheading",
+              name: "subheading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Teknisk info",
+              name: "technicalInfo",
+              widget: "string",
+              optional: true,
+            }
           - label: "Galleri"
             name: "allImages"
             widget: "list"
@@ -149,11 +229,31 @@ collections:
             }
           - { label: "Sidetittel", name: "title", widget: "string" }
           - { label: Forsidebilde, name: forsidebilde, widget: image }
-          - { label: Undertittel, name: subtitle, widget: string }
+          - {
+              label: Undertittel,
+              name: subtitle,
+              widget: string,
+              optional: true,
+            }
           - { label: SEO beskrivelse, name: seoDescription, widget: string }
-          - { label: "Overskrift", name: "heading", widget: "string" }
-          - { label: "Undertekst", name: "subheading", widget: "string" }
-          - { label: "Info", name: "technicalInfo", widget: "string" }
+          - {
+              label: "Overskrift",
+              name: "heading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Undertekst",
+              name: "subheading",
+              widget: "string",
+              optional: true,
+            }
+          - {
+              label: "Info",
+              name: "technicalInfo",
+              widget: "string",
+              optional: true,
+            }
           - label: "Produkter"
             name: "products"
             widget: list
