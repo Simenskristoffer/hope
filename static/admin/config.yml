@@ -70,8 +70,7 @@ collections:
           - label: "Galleri"
             name: "allImages"
             widget: "list",
-            required: false
-            field: { label: Bilde, name: image, widget: image }
+            field: { label: Bilde, name: image, widget: image, required: false }
       - file: "src/pages/automatisk-industrimaskin/index.md"
         label: "Automatisk Industrimaskin"
         name: "automatisk-industrimaskin"
