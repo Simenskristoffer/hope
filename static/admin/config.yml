@@ -69,7 +69,8 @@ collections:
           - { label: "Teknisk info", name: "technicalInfo", widget: "string" }
           - label: "Galleri"
             name: "allImages"
-            widget: "list"
+            widget: "list",
+            required: false
             field: { label: Bilde, name: image, widget: image }
       - file: "src/pages/automatisk-industrimaskin/index.md"
         label: "Automatisk Industrimaskin"
