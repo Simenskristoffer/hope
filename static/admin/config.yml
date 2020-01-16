@@ -24,20 +24,20 @@ collections:
               label: "Undertittel",
               name: "subtitle",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - { label: "Forsidebilde", name: "forsidebilde", widget: image }
           - {
               label: "Firmanavn",
               name: "heading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Firmainfo",
               name: "subheading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - { label: "Mer info", name: "info", widget: "string" }
           - { label: "Bilde", name: "image", widget: "image" }
@@ -58,13 +58,13 @@ collections:
               label: "Heading",
               name: "heading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Subheading",
               name: "subheading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - { label: "Teknisk info", name: "technicalInfo", widget: "string" }
           - label: "Galleri"
@@ -88,19 +88,19 @@ collections:
               label: "Heading",
               name: "heading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Subheading",
               name: "subheading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Teknisk Info",
               name: "technicalInfo",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - label: "Galleri"
             name: "allImages"
@@ -123,19 +123,19 @@ collections:
               label: "Heading",
               name: "heading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Subheading",
               name: "subheading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Teknisk info",
               name: "technicalInfo",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - label: "Galleri"
             name: "allImages"
@@ -155,13 +155,13 @@ collections:
               label: "Sidetittel",
               name: "title",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Undertittel",
               name: "subtitle",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "SEO beskrivelse",
@@ -199,19 +199,19 @@ collections:
               label: "Heading",
               name: "heading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Subheading",
               name: "subheading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Teknisk info",
               name: "technicalInfo",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - label: "Galleri"
             name: "allImages"
@@ -233,26 +233,26 @@ collections:
               label: Undertittel,
               name: subtitle,
               widget: string,
-              optional: true,
+              required: false,
             }
           - { label: SEO beskrivelse, name: seoDescription, widget: string }
           - {
               label: "Overskrift",
               name: "heading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Undertekst",
               name: "subheading",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - {
               label: "Info",
               name: "technicalInfo",
               widget: "string",
-              optional: true,
+              required: false,
             }
           - label: "Produkter"
             name: "products"
