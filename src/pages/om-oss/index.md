@@ -4,7 +4,7 @@ seoDescription: Ta kontakt med oss i dag
 title: Om oss
 subtitle: Eivind Hope AS er ei familiebedrift som held til i Rubbestadneset på Bømlo
 forsidebilde: /img/forsidebilde.jpg
-pageImage: /img/home-img-1.jpg
+pageImage: /img/home-img-1-ikke-slett.jpg
 heading: Kort om Eivind Hope AS
 subheading: Eivind Hope AS er ei familiebedrift
 technicalInfo: >-
