@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Velkommen til Eivind Hope AS
 subtitle: Eivind Hope AS er ei familiebedrift som held til i Rubbestadneset på Bømlo.
-forsidebilde: /img/19.JPG
+forsidebilde: /img/39.JPG
 heading: Eivind Hope AS - din blikkenslager
 subheading: Familiebedrift i Rubbestadneset på Bømlo
 info: >-
