@@ -104,7 +104,5 @@ allImages:
   - /img/87.JPG
   - /img/88.JPG
   - /img/90.JPG
-  - null
-  - null
 ---
 
